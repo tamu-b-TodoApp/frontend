@@ -1,6 +1,7 @@
-import type { Preview } from '@storybook/nextjs-vite';
-import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import type { Preview } from '@storybook/nextjs-vite';
+
 import theme from '../theme';
 
 const preview: Preview = {

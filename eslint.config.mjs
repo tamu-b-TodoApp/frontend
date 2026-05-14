@@ -1,11 +1,11 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from 'eslint-plugin-storybook';
-
 import { defineConfig, globalIgnores } from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import storybook from 'eslint-plugin-storybook';
 import unusedImports from 'eslint-plugin-unused-imports';
 
 const eslintConfig = defineConfig([
@@ -15,6 +15,24 @@ const eslintConfig = defineConfig([
   {
     plugins: { prettier: prettierPlugin },
     rules: { 'prettier/prettier': 'warn' },
+  },
+  {
+    plugins: { 'simple-import-sort': simpleImportSort },
+    rules: {
+      'simple-import-sort/imports': [
+        'error',
+        {
+          groups: [
+            ['^react$'], // React
+            ['^next'], // Next.js
+            ['^@mui', '^@?\\w'], // MUI and other external packages
+            ['^@/'], // Absolute imports (assuming '@' is configured as the base URL)
+            ['^\\.'], // Relative imports
+          ],
+        },
+      ],
+      'simple-import-sort/exports': 'error',
+    },
   },
   {
     rules: {

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 import { Roboto } from 'next/font/google';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from '../theme';
+
 import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
+
+import theme from '../theme';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
