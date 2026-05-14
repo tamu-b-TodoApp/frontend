@@ -1,6 +1,4 @@
 import type { Preview } from '@storybook/nextjs-vite';
-import React from 'react';
-import '../app/globals.css';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../theme';
