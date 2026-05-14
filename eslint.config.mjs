@@ -17,6 +17,14 @@ const eslintConfig = defineConfig([
     rules: { 'prettier/prettier': 'warn' },
   },
   {
+    rules: {
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
+      ],
+    },
+  },
+  {
     plugins: { 'unused-imports': unusedImports },
     rules: {
       'unused-imports/no-unused-imports': 'error',
