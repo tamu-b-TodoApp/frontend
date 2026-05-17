@@ -1,9 +1,11 @@
 import { type Components, type Theme } from '@mui/material/styles';
 
-export const MuiIconButton: Components<Theme>['MuiIconButton'] = {
+export const MuiToolbar: Components<Theme>['MuiToolbar'] = {
   styleOverrides: {
     root: ({ theme }) => ({
-      borderRadius: (theme.vars || theme).shape.borderRadius,
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
     }),
   },
 };

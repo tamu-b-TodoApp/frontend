@@ -13,17 +13,8 @@ import { gray } from '@/theme/colorSchemes';
 
 export const Header: FC = () => {
   return (
-    <AppBar
-      position="absolute"
-      elevation={0}
-      sx={{
-        display: { xs: 'auto', sm: 'none' },
-        bgcolor: 'background.paper',
-        borderBottom: '1px solid',
-        borderColor: 'divider',
-      }}
-    >
-      <Toolbar variant="regular">
+    <AppBar>
+      <Toolbar>
         <Stack
           direction="row"
           spacing={1}
@@ -49,6 +40,7 @@ export const Header: FC = () => {
             sx={{
               border: '1px solid ',
               borderColor: gray[200],
+              borderRadius: 1,
             }}
           >
             <MenuRoundedIcon />
