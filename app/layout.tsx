@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 
-import theme from '../theme';
+import theme from '../theme/theme';
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
+const notoSansJp = Noto_Sans_JP({
   subsets: ['latin'],
+  weight: ['400', '700'],
+  preload: false,
+  variable: '--font-noto-sans-jp',
   display: 'swap',
-  variable: '--font-roboto',
+  fallback: ['Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={roboto.variable}>
+    <html lang="ja" className={notoSansJp.variable}>
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
