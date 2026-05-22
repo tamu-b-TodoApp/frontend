@@ -11,15 +11,7 @@ import { Icon } from './components/Icon';
 
 export const Header: FC = () => {
   return (
-    <AppBar
-      color="default"
-      elevation={0}
-      position="fixed"
-      sx={{
-        borderBottom: '1px solid',
-        borderColor: 'divider',
-      }}
-    >
+    <AppBar>
       <Toolbar>
         <Stack
           direction="row"

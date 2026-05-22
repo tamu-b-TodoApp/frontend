@@ -12,7 +12,7 @@ const HomeLayout: FC<PropsWithChildren> = ({ children }) => {
       <Header />
       {/* Toolbar分のスペースを確保 */}
       <Toolbar />
-      <Stack direction={'row'}>
+      <Stack direction="row">
         <SideMenu />
         {children}
       </Stack>
