@@ -9,8 +9,6 @@ import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import { gray } from '@/theme/colorSchemes';
-
 export const Header: FC = () => {
   return (
     <AppBar>
@@ -39,7 +37,7 @@ export const Header: FC = () => {
             aria-label="menu"
             sx={{
               border: '1px solid ',
-              borderColor: gray[200],
+              borderColor: 'gray',
               borderRadius: 1,
             }}
           >
