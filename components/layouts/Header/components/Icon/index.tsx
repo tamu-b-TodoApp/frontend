@@ -1,7 +1,9 @@
+import { type FC } from 'react';
+
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import Box from '@mui/material/Box';
 
-export const Icon = () => {
+export const Icon: FC = () => {
   return (
     <Box
       sx={{

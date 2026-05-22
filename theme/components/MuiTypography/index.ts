@@ -1,6 +1,7 @@
+import { type Theme } from '@mui/material/styles';
 import { type Components } from '@mui/material/styles';
 
-export const MuiTypography: Components['MuiTypography'] = {
+export const MuiTypography: Components<Theme>['MuiTypography'] = {
   styleOverrides: {
     root: {
       variants: [

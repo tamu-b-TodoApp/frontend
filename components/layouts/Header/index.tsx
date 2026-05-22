@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+
 import { Icon } from './components/Icon';
 
 export const Header: FC = () => {
@@ -14,7 +15,10 @@ export const Header: FC = () => {
       color="default"
       elevation={0}
       position="fixed"
-      sx={{ borderBottom: '1px solid', borderColor: 'divider' }}
+      sx={{
+        borderBottom: '1px solid',
+        borderColor: 'divider',
+      }}
     >
       <Toolbar>
         <Stack
@@ -37,7 +41,7 @@ export const Header: FC = () => {
             sx={{
               border: '1px solid ',
               borderColor: 'divider',
-              borderRadius: 1,
+              borderRadius: 2,
             }}
           >
             <MenuRoundedIcon />
